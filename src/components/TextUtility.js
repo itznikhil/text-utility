@@ -52,11 +52,11 @@ export default function TextUtility(props) {
                     <Form.Label style={{fontSize:36, fontWeight:500}}>Enter text:</Form.Label>
                     <Form.Control as="textarea" rows={8} onChange={handleInputChange} value={text} />
                 </Form.Group>
-                <Button variant="primary" className="me-3" onClick={lowerCase} disabled={text.length===0}>Convert to Lowercase</Button>
-                <Button variant="primary" className="me-3" onClick={capitalizeEachWord} disabled={text.length===0}>Capitalize Each Word</Button>
-                <Button variant="primary" className="me-3" onClick={upperCase} disabled={text.length===0}>Convert to Uppercase</Button>
-                <Button variant="primary" className="me-3" onClick={removeExtraSpaces} disabled={text.length===0}>Remove Extra Spaces</Button>
-                <Button variant="primary" className="me-3" onClick={removeSpecialCharacters} disabled={text.length===0}>Remove Special Characters</Button>
+                <Button variant="primary" className="me-3 my-2" onClick={capitalizeEachWord} disabled={text.length===0}>Capitalize Each Word</Button>
+                <Button variant="primary" className="me-3 my-2" onClick={upperCase} disabled={text.length===0}>Convert to Uppercase</Button>
+                <Button variant="primary" className="me-3 my-2" onClick={lowerCase} disabled={text.length===0}>Convert to Lowercase</Button>
+                <Button variant="primary" className="me-3 my-2" onClick={removeExtraSpaces} disabled={text.length===0}>Remove Extra Spaces</Button>
+                <Button variant="primary" className="me-3 my-2" onClick={removeSpecialCharacters} disabled={text.length===0}>Remove Special Characters</Button>
             </Form>
 
             <h2 className="mt-3">Your text summary</h2>
@@ -64,7 +64,7 @@ export default function TextUtility(props) {
             <p>{countWords(text) / 250} Minutes Read</p> 
             <h2 className="mt-3">Preview</h2>
             <p>{text?text:"Nothing to preview!"}</p>
-            <Button variant="primary" onClick={copyText} disabled={text.length===0}>Copy Text</Button>
+            <Button variant="primary" className="my-2" onClick={copyText} disabled={text.length===0}>Copy Text</Button>
         </div>
     )
 }
