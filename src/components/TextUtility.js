@@ -49,7 +49,7 @@ export default function TextUtility(props) {
         <div className="container mt-3">
             <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label style={{fontSize:36, fontWeight:500}}>Enter text:</Form.Label>
+                    <Form.Label style={{fontSize:36, fontWeight:500}}>Try Text Utility - word counter, character counter, remove extra spaces</Form.Label>
                     <Form.Control as="textarea" rows={8} onChange={handleInputChange} value={text} />
                 </Form.Group>
                 <Button variant="primary" className="me-3 my-2" onClick={capitalizeEachWord} disabled={text.length===0}>Capitalize Each Word</Button>
